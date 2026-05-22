@@ -1,0 +1,7 @@
+neobank:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: "{{ env_var('NEOBANK_DUCKDB_PATH', 'neobank.duckdb') }}"
+      threads: 4

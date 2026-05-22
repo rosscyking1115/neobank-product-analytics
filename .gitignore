@@ -1,0 +1,29 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# Data generated locally
+raw/
+data/
+*.duckdb
+*.duckdb.wal
+*.parquet
+
+# dbt build artifacts
+dbt_neobank/target/
+dbt_neobank/dbt_packages/
+dbt_neobank/logs/
+dbt_neobank/.user.yml
+
+# Local app/editor files
+.env
+.env.*
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store

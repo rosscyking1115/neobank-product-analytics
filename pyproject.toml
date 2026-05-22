@@ -1,0 +1,44 @@
+[project]
+name = "neobank-product-analytics"
+version = "0.1.0"
+description = "A Monzo-inspired neobank product analytics project covering dbt metrics, experimentation, geo incrementality, and decisioning."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "altair>=5.5.0",
+    "dbt-core>=1.10.0,<2",
+    "dbt-duckdb>=1.9.0,<2",
+    "duckdb>=1.3.0",
+    "faker>=37.0.0",
+    "lightgbm>=4.6.0",
+    "linearmodels>=6.0",
+    "marimo>=0.13.0",
+    "numpy>=2.2.0",
+    "optuna>=4.3.0",
+    "pandas>=2.2.0",
+    "plotly>=6.0.0",
+    "polars>=1.30.0",
+    "pyarrow>=20.0.0",
+    "scikit-learn>=1.6.0",
+    "scipy>=1.15.0",
+    "shap>=0.47.0",
+    "statsmodels>=0.14.0",
+    "streamlit>=1.45.0",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3.0",
+    "ruff>=0.11.0",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: stg_phase0_smoke
+    description: Phase 0 dbt smoke-test model.
+    columns:
+      - name: smoke_test_id
+        description: Constant identifier used to verify dbt can build locally and in CI.
+        tests:
+          - not_null
+          - unique
+      - name: scaffold_status
+        description: Human-readable setup status.
+        tests:
+          - accepted_values:
+              arguments:
+                values: ["phase_0_ready"]
